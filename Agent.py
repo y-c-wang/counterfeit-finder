@@ -14,7 +14,7 @@ class Agent:
   def gen_counterfeits_data(self, num_counterfeit: int):
     counterfeits = random.sample(range(0, common.NUM_COIN),
                                  num_counterfeit)
-    coin_data = np.array([1 if idx in counterfeits else 0
+    coin_data = np.array([random.uniform(-1, 1) if idx in counterfeits else 0
                           for idx in range(common.NUM_COIN)])
     return counterfeits, coin_data
 
